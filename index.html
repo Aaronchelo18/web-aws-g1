@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Laboratorio de Virtualización - GRUPO 1 UPeU</title>
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png"> <!-- Asegúrate que esta ruta sea correcta -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Actualizado a una versión más reciente -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -16,7 +16,7 @@
     <nav id="main-navbar">
         <div class="container nav-container">
             <a href="index.html" class="nav-logo">
-                <i class="fas fa-cogs"></i> <!-- Icono Temporal para el logo -->
+                <i class="fas fa-cogs"></i>
                 <span>G1-VirtLab</span>
             </a>
             <ul class="nav-menu" id="nav-menu">
@@ -25,9 +25,6 @@
                 <li><a href="#virtual-machines" class="nav-link">VMs</a></li>
                 <li><a href="#active-directory" class="nav-link">Servicios AD</a></li>
                 <li><a href="#process" class="nav-link">Proceso</a></li>
-                <!-- Ejemplo de enlace a futuro HTML:
-                <li><a href="equipo.html" class="nav-link">Nuestro Equipo</a></li>
-                -->
             </ul>
             <div class="nav-contact">
                 <a href="mailto:contacto@upeu.edu.pe?subject=Consulta Proyecto Virtualización G1" class="btn btn-primary">Contactar</a>
@@ -41,216 +38,337 @@
     <!-- ==================== HERO HEADER ==================== -->
     <header id="main-header">
         <div class="container hero-content" data-aos="fade-in" data-aos-delay="200">
-            <h1><i class="fas fa-network-wired"></i> Laboratorio de Virtualización Avanzado</h1>
+            <h1>Laboratorio de Virtualización Avanzado</h1>
             <p class="subtitle">Un Proyecto del GRUPO 1-VIRTUALIZACIÓN - UPeU Tarapoto</p>
             <a href="#introduction" class="btn btn-secondary scroll-down-btn">Explorar Proyecto <i class="fas fa-chevron-down"></i></a>
         </div>
     </header>
 
     <main>
-        <!-- SECCIÓN DE INTRODUCCIÓN (ya existente) -->
-        <section id="introduction" class="reveal section-padding">
-            <div class="container section-content-wrapper">
-                <h2><i class="fas fa-university"></i> Presentación del Proyecto</h2>
-                <p class="intro-text">
-                    Este proyecto es una demostración práctica desarrollada por estudiantes de la carrera de Ingeniería de Sistemas de la
-                    <strong>Universidad Peruana Unión (UPeU), filial Tarapoto</strong>, como parte fundamental del curso de Virtualización.
-                    Nuestro objetivo es aplicar y consolidar los conocimientos adquiridos en la planificación, configuración,
-                    y gestión de entornos virtualizados complejos, simulando una infraestructura TI empresarial funcional.
-                </p>
-                <p class="intro-text">
-                    A través de esta plataforma, exploraremos la arquitectura implementada, los componentes de hardware y software,
-                    los servicios de red configurados, y el proceso metodológico seguido para alcanzar los objetivos del laboratorio.
-                    ¡Bienvenidos a nuestro entorno virtual!
-                </p>
-            </div>
-        </section>
-
-        <!-- SECCIÓN DE ARQUITECTURA (ya existente) -->
-        <section id="overview" class="reveal section-padding">
-            <div class="container section-content-wrapper">
-                <h2><i class="fas fa-sitemap"></i> Arquitectura del Proyecto</h2>
-                <p>La infraestructura de este laboratorio se basa en un PC físico actuando como servidor anfitrión (Hypervisor), sobre el cual se ejecutan múltiples máquinas virtuales (VMs) que simulan un entorno de red empresarial con servicios de Active Directory, gestionado integralmente por el <strong>GRUPO 1-VIRTUALIZACIÓN</strong>.</p>
-                <div class="architecture-diagram">
-                    <div class="node server-node" data-aos="zoom-in">
-                        <i class="fas fa-server icon-large"></i>
-                        <strong>Servidor Físico (Host)</strong>
-                        <span>Hypervisor: Windows Server 2022 (Suposición)</span>
-                        <span>Operador: Juan Jose</span>
-                        <span>IP: 192.168.1.10</span>
-                        <span>Recursos: 150GB HDD, 6GB RAM</span>
-                        <span>Rol Principal: Plataforma de Virtualización</span>
+        <!-- ==================== INTRODUCCIÓN ==================== -->
+        <section id="introduction" class="section-padding section-light">
+            <div class="container">
+                <h2 data-aos="fade-up"><i class="fas fa-university"></i> Presentación del Proyecto</h2>
+                <div class="introduction-content">
+                    <div class="intro-text-block" data-aos="fade-right" data-aos-delay="100">
+                        <p class="intro-text">
+                            Este proyecto es una demostración práctica desarrollada por estudiantes de la carrera de Ingeniería de Sistemas de la
+                            <strong>Universidad Peruana Unión (UPeU), filial Tarapoto</strong>, como parte fundamental del curso de Virtualización.
+                            Nuestro objetivo es aplicar y consolidar los conocimientos adquiridos en la planificación, configuración,
+                            y gestión de entornos virtualizados complejos, simulando una infraestructura TI empresarial funcional.
+                        </p>
+                        <p class="intro-text">
+                            A través de esta plataforma, exploraremos la arquitectura implementada, los componentes de hardware y software,
+                            los servicios de red configurados, y el proceso metodológico seguido para alcanzar los objetivos del laboratorio.
+                            ¡Bienvenidos a nuestro entorno virtual!
+                        </p>
                     </div>
-                    <div class="vm-nodes-container">
-                        <div class="node vm-node" data-aos="fade-up" data-aos-delay="100">
-                            <i class="fab fa-windows icon-vm"></i>
-                            <strong>VM: Windows 7 (PC-01)</strong>
-                            <span>SO: Windows 7 Ultimate</span>
-                            <span>Recursos: 50GB vDisk, 4GB vRAM</span>
-                            <span>Usuario: Aarón López</span>
-                        </div>
-                        <div class="node vm-node" data-aos="fade-up" data-aos-delay="200">
-                            <i class="fab fa-ubuntu icon-vm"></i>
-                            <strong>VM: Ubuntu 24 (PC-02)</strong>
-                            <span>SO: Ubuntu 24.04 LTS</span>
-                            <span>Recursos: 50GB vDisk, 4GB vRAM</span>
-                            <span>Usuario: Medalith Becerril</span>
-                        </div>
-                        <div class="node vm-node" data-aos="fade-up" data-aos-delay="300">
-                            <i class="fab fa-debian icon-vm"></i>
-                            <strong>VM: Debian (PC-03)</strong>
-                            <span>SO: Debian 12 "Bookworm"</span>
-                            <span>Recursos: 50GB vDisk, 4GB vRAM</span>
-                            <span>Usuario: Liss Nayalith</span>
-                        </div>
-                        <div class="node vm-node" data-aos="fade-up" data-aos-delay="400">
-                            <i class="fab fa-windows icon-vm"></i>
-                            <strong>VM: Windows 10 (PC-04)</strong>
-                            <span>SO: Windows 10 Pro</span>
-                            <span>Recursos: 50GB vDisk, 4GB vRAM</span>
-                            <span>Usuario: Miguel Gonzales</span>
-                        </div>
+                    <div class="intro-image-block" data-aos="fade-left" data-aos-delay="200">
+                        <img src="/img/img.jpg" alt="Estudiantes trabajando en proyecto de virtualización">
+                        <!-- REEMPLAZA ESTA IMAGEN -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN SERVER DETAILS (ya existente) -->
-        <section id="server-details" class="reveal section-padding">
-             <div class="container section-content-wrapper">
-                <h2><i class="fas fa-cogs"></i> Especificaciones del Servidor Anfitrión</h2>
-                <div class="card-like-content">
-                    <h3>Detalles del Host Principal (Operador: Juan Jose)</h3>
-                    <ul>
-                        <li><strong>Sistema Operativo Hypervisor:</strong> Windows Server 2022 (o equivalente)</li>
-                        <li><strong>Almacenamiento Total:</strong> 150 GB (Dedicado para VMs y Sistema Host)</li>
-                        <li><strong>Memoria RAM Total:</strong> 6 GB</li>
-                        <li><strong>Dirección IP Estática:</strong> 192.168.1.10</li>
-                        <li><strong>Roles Adicionales Potenciales:</strong> Controlador de Dominio (AD DS), DNS, DHCP.</li>
-                    </ul>
+                <!-- ==================== ARQUITECTURA ==================== -->
+                <section id="overview" class="section-padding section-dark section-bg-pattern-1">
+                    <div class="container">
+                        <h2 data-aos="fade-up"><i class="fas fa-sitemap"></i> Arquitectura del Proyecto</h2>
+                        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">La infraestructura de este laboratorio se basa en un PC físico actuando como servidor anfitrión (Hypervisor), sobre el cual se ejecutan múltiples máquinas virtuales (VMs) que simulan un entorno de red empresarial con servicios de Active Directory, gestionado integralmente por el <strong>GRUPO 1-VIRTUALIZACIÓN</strong>.</p>
+                        <div class="architecture-diagram">
+                            <div class="node server-node" data-aos="zoom-in" data-aos-delay="200">
+                                <i class="fas fa-server icon-large"></i>
+                                <strong>Servidor Físico (Host)</strong>
+                                <span>Hypervisor: Windows Server 2022</span>
+                                <span>Operador: Juan Jose</span>
+                                <span>IP: 192.168.1.10</span>
+                                <span>Recursos: 150GB HDD, 6GB RAM</span>
+                            </div>
+                            <div class="vm-nodes-container">
+                                <div class="node vm-node" data-aos="fade-up" data-aos-delay="300">
+                                    <i class="fab fa-windows icon-vm"></i>
+                                    <strong>VM: Windows 7 (PC-01)</strong>
+                                    <span>Usuario: Aarón López</span>
+                                </div>
+                                <div class="node vm-node" data-aos="fade-up" data-aos-delay="400">
+                                    <i class="fab fa-ubuntu icon-vm"></i>
+                                    <strong>VM: Ubuntu 24 (PC-02)</strong>
+                                    <span>Usuario: Medalith Becerril</span>
+                                </div>
+                                <div class="node vm-node" data-aos="fade-up" data-aos-delay="500">
+                                    <!-- AQUÍ ESTÁ EL CAMBIO DEFINITIVO Y CORRECTO -->
+                                    <i class="fab fa-linux icon-vm"></i> 
+                                    <strong>VM: Debian (PC-03)</strong>
+                                    <span>Usuario: Liss Nayalith</span>
+                                </div>
+                                <div class="node vm-node" data-aos="fade-up" data-aos-delay="600">
+                                    <i class="fab fa-windows icon-vm"></i>
+                                    <strong>VM: Windows 10 (PC-04)</strong>
+                                    <span>Usuario: Miguel Gonzales</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+        <!-- ==================== SERVER DETAILS (ahora integrada o rediseñada) ==================== -->
+        <!-- Puedes optar por integrar los detalles del servidor en la sección de arquitectura o darle un nuevo tratamiento -->
+        <section id="server-details" class="section-padding section-light">
+             <div class="container">
+                <h2 data-aos="fade-up"><i class="fas fa-cogs"></i> Especificaciones del Servidor Anfitrión</h2>
+                <div class="server-specs-grid">
+                    <div class="spec-item" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-microchip"></i>
+                        <h3>Hypervisor</h3>
+                        <p>Windows Server 2022 (o equivalente)</p>
+                    </div>
+                    <div class="spec-item" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-hdd"></i>
+                        <h3>Almacenamiento</h3>
+                        <p>150 GB (Dedicado VMs y Host)</p>
+                    </div>
+                    <div class="spec-item" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-memory"></i>
+                        <h3>Memoria RAM</h3>
+                        <p>6 GB Total</p>
+                    </div>
+                    <div class="spec-item" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>IP Estática</h3>
+                        <p>192.168.1.10</p>
+                    </div>
+                    <div class="spec-item full-width-spec" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Roles Adicionales</h3>
+                        <p>Controlador de Dominio (AD DS), DNS, DHCP.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN VIRTUAL MACHINES (ya existente) -->
-        <section id="virtual-machines" class="reveal section-padding">
-            <div class="container section-content-wrapper">
-                <h2><i class="fas fa-desktop"></i> Configuración de Máquinas Virtuales Cliente</h2>
-                <div class="grid-container">
-                    <div class="card vm-card" data-aos="flip-left">
-                        <i class="fab fa-windows card-icon"></i>
-                        <h3>PC-01: Windows 7</h3>
-                        <p><strong>Usuario:</strong> Aarón López</p>
-                        <p class="vm-os-detail">Ejecutando: <strong>Windows 7 Ultimate</strong>. Destinada a pruebas de compatibilidad y escenarios con sistemas legados.</p>
-                        <ul>
-                            <li><strong>Almacenamiento:</strong> 50 GB</li>
-                            <li><strong>Memoria RAM:</strong> 4 GB</li>
-                        </ul>
-                    </div>
-                    <div class="card vm-card" data-aos="flip-left" data-aos-delay="100">
-                        <i class="fab fa-ubuntu card-icon"></i>
-                        <h3>PC-02: Ubuntu 24 LTS</h3>
-                        <p><strong>Usuario:</strong> Medalith Becerril</p>
-                        <p class="vm-os-detail">Ejecutando: <strong>Ubuntu 24.04 LTS</strong>. Plataforma Linux moderna para desarrollo, pruebas de software y navegación segura.</p>
-                        <ul>
-                            <li><strong>Almacenamiento:</strong> 50 GB</li>
-                            <li><strong>Memoria RAM:</strong> 4 GB</li>
-                        </ul>
-                    </div>
-                    <div class="card vm-card" data-aos="flip-left" data-aos-delay="200">
-                        <i class="fab fa-debian card-icon"></i>
-                        <h3>PC-03: Debian</h3>
-                        <p><strong>Usuario:</strong> Liss Nayalith</p>
-                        <p class="vm-os-detail">Ejecutando: <strong>Debian 12 "Bookworm"</strong>. Distribución robusta y versátil para funciones de servidor o cliente avanzado.</p>
-                        <ul>
-                            <li><strong>Almacenamiento:</strong> 50 GB</li>
-                            <li><strong>Memoria RAM:</strong> 4 GB</li>
-                        </ul>
-                    </div>
-                    <div class="card vm-card" data-aos="flip-left" data-aos-delay="300">
-                        <i class="fab fa-windows card-icon"></i>
-                        <h3>PC-04: Windows 10 Pro</h3>
-                        <p><strong>Usuario:</strong> Miguel Gonzales</p>
-                        <p class="vm-os-detail">Ejecutando: <strong>Windows 10 Pro</strong>. Simula un puesto de trabajo estándar en un entorno corporativo, integrado al dominio.</p>
-                        <ul>
-                            <li><strong>Almacenamiento:</strong> 50 GB</li>
-                            <li><strong>Memoria RAM:</strong> 4 GB</li>
-                        </ul>
+              <!-- ==================== VIRTUAL MACHINES ==================== -->
+              <section id="virtual-machines" class="section-padding section-dark section-bg-image-1">
+                <!-- REEMPLAZA 'URL_IMAGEN_FONDO_VMS.jpg' con una imagen adecuada -->
+                <div class="section-overlay"></div>
+                <div class="container">
+                    <h2 data-aos="fade-up"><i class="fas fa-desktop"></i> Máquinas Virtuales Cliente</h2>
+                    <div class="grid-container vm-grid">
+                        <div class="card vm-card" data-aos="flip-left" data-aos-delay="100">
+                            <div class="vm-card-header">
+                               <i class="fab fa-windows card-icon"></i>
+                               <h3>PC-01: Windows 7</h3>
+                            </div>
+                            <p><strong>Usuario:</strong> Aarón López</p>
+                            <p class="vm-os-detail">Ejecutando <strong>Windows 7 Ultimate</strong>. Pruebas de compatibilidad y sistemas legados.</p>
+                            <ul>
+                                <li><i class="fas fa-hdd"></i> 50 GB Almacenamiento</li>
+                                <li><i class="fas fa-memory"></i> 4 GB RAM</li>
+                            </ul>
+                        </div>
+                        <div class="card vm-card" data-aos="flip-left" data-aos-delay="200">
+                            <div class="vm-card-header">
+                                <i class="fab fa-ubuntu card-icon"></i>
+                                <h3>PC-02: Ubuntu 24 LTS</h3>
+                            </div>
+                            <p><strong>Usuario:</strong> Medalith Becerril</p>
+                            <p class="vm-os-detail">Ejecutando <strong>Ubuntu 24.04 LTS</strong>. Plataforma Linux moderna para desarrollo y pruebas.</p>
+                            <ul>
+                                <li><i class="fas fa-hdd"></i> 50 GB Almacenamiento</li>
+                                <li><i class="fas fa-memory"></i> 4 GB RAM</li>
+                            </ul>
+                        </div>
+                        <div class="card vm-card" data-aos="flip-left" data-aos-delay="300">
+                            <div class="vm-card-header">
+                                <!-- AQUÍ ESTÁ EL CAMBIO DEFINITIVO Y CORRECTO -->
+                                <i class="fab fa-linux card-icon"></i> 
+                                <h3>PC-03: Debian</h3>
+                            </div>
+                            <p><strong>Usuario:</strong> Liss Nayalith</p>
+                            <p class="vm-os-detail">Ejecutando <strong>Debian 12 "Bookworm"</strong>. Distribución robusta para servidor o cliente.</p>
+                            <ul>
+                                <li><i class="fas fa-hdd"></i> 50 GB Almacenamiento</li>
+                                <li><i class="fas fa-memory"></i> 4 GB RAM</li>
+                            </ul>
+                        </div>
+                        <div class="card vm-card" data-aos="flip-left" data-aos-delay="400">
+                             <div class="vm-card-header">
+                                <i class="fab fa-windows card-icon"></i>
+                                <h3>PC-04: Windows 10 Pro</h3>
+                            </div>
+                            <p><strong>Usuario:</strong> Miguel Gonzales</p>
+                            <p class="vm-os-detail">Ejecutando <strong>Windows 10 Pro</strong>. Simula puesto de trabajo corporativo integrado al dominio.</p>
+                            <ul>
+                                <li><i class="fas fa-hdd"></i> 50 GB Almacenamiento</li>
+                                <li><i class="fas fa-memory"></i> 4 GB RAM</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- SECCIÓN ACTIVE DIRECTORY (ya existente) -->
-        <section id="active-directory" class="reveal section-padding">
-            <div class="container section-content-wrapper">
-                <h2><i class="fas fa-shield-alt"></i> Servicios Críticos: Active Directory</h2>
-                <p>El servidor anfitrión, además de su rol como hypervisor, está configurado como Controlador de Dominio (DC), proporcionando los siguientes servicios esenciales para la red simulada:</p>
-                <ul class="feature-list">
-                    <li><i class="fas fa-globe"></i> <strong>Servicio DNS:</strong> Gestión centralizada de resolución de nombres para todos los equipos del dominio. (Valoración: 8 Puntos)</li>
-                    <li><i class="fas fa-project-diagram"></i> <strong>Servicio DHCP:</strong> Asignación automática y gestionada de direcciones IP (Rango: 192.168.1.0/24). (Valoración: 1 Punto)</li>
-                    <li><i class="fas fa-user-shield"></i> <strong>Políticas de Grupo (GPO):</strong> Implementación de directivas de seguridad, configuración de software y restricciones de usuario. (Valoración: 3 Puntos)</li>
-                    <li><i class="fas fa-chart-bar"></i> <strong>Generación de Informes:</strong> Capacidades de auditoría y monitorización del estado y seguridad del dominio. (Valoración: 5 Puntos)</li>
-                    <li><i class="fas fa-users-cog"></i> <strong>Administración de Usuarios y Grupos:</strong> Creación y gestión centralizada de identidades y permisos de acceso. (Valoración: 2 Puntos por Grupo)</li>
+        <!-- ==================== ACTIVE DIRECTORY ==================== -->
+        <section id="active-directory" class="section-padding section-light">
+            <div class="container">
+                <h2 data-aos="fade-up"><i class="fas fa-shield-alt"></i> Servicios Críticos: Active Directory</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">El servidor anfitrión, como Controlador de Dominio (DC), provee servicios esenciales para la red simulada:</p>
+                <ul class="feature-list-ad">
+                    <li data-aos="fade-right" data-aos-delay="200">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <strong>Servicio DNS</strong>
+                            <p>Gestión centralizada de nombres. (Valoración: <span class="counter" data-target="8">0</span> Puntos)</p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-right" data-aos-delay="300">
+                        <i class="fas fa-project-diagram"></i>
+                        <div>
+                            <strong>Servicio DHCP</strong>
+                            <p>Asignación IP automática (192.168.1.0/24). (Valoración: <span class="counter" data-target="1">0</span> Punto)</p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-right" data-aos-delay="400">
+                        <i class="fas fa-user-shield"></i>
+                        <div>
+                            <strong>Políticas de Grupo (GPO)</strong>
+                            <p>Directivas de seguridad y configuración. (Valoración: <span class="counter" data-target="3">0</span> Puntos)</p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-right" data-aos-delay="500">
+                        <i class="fas fa-chart-bar"></i>
+                        <div>
+                            <strong>Generación de Informes</strong>
+                            <p>Auditoría y monitorización del dominio. (Valoración: <span class="counter" data-target="5">0</span> Puntos)</p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-right" data-aos-delay="600">
+                        <i class="fas fa-users-cog"></i>
+                        <div>
+                            <strong>Adm. Usuarios y Grupos</strong>
+                            <p>Gestión central de identidades. (Valoración: <span class="counter" data-target="4">0</span> Puntos por Grupo)</p> <!-- Asumiendo 2 grupos x 2 puntos -->
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
 
-        <!-- SECCIÓN USERS ACCESS (ya existente) -->
-        <section id="users-access" class="reveal section-padding">
-            <div class="container section-content-wrapper">
-                <h2><i class="fas fa-id-card"></i> Mapeo de Usuarios y Equipos</h2>
-                <p>La siguiente tabla detalla la asignación de usuarios a sus respectivas máquinas virtuales cliente dentro del dominio:</p>
-                <div class="user-list-table">
-                    <div class="user-list-header">
-                        <div>Usuario Asignado</div>
-                        <div>Máquina Virtual (PC ID)</div>
-                        <div>Sistema Operativo</div>
+                <!-- ==================== USERS ACCESS ==================== -->
+                <section id="users-access" class="section-padding section-dark">
+                    <div class="container">
+                        <h2 data-aos="fade-up"><i class="fas fa-id-card"></i> Mapeo de Usuarios y Equipos</h2>
+                        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Asignación de usuarios a sus respectivas máquinas virtuales cliente dentro del dominio:</p>
+                        <div class="user-table-wrapper" data-aos="zoom-in" data-aos-delay="200">
+                            <table class="user-list-table">
+                                <thead>
+                                    <tr>
+                                        <!-- Para vista móvil, añade data-label aquí si quieres las etiquetas -->
+                                        <th>Usuario Asignado</th>
+                                        <th>Máquina Virtual (PC ID)</th>
+                                        <th>Sistema Operativo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Usuario Asignado"><i class="fas fa-user-tie"></i> Aarón López</td>
+                                        <td data-label="Máquina Virtual">PC-01</td>
+                                        <td data-label="Sistema Operativo"><i class="fab fa-windows"></i> Windows 7</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Usuario Asignado"><i class="fas fa-user-tie"></i> Medalith Becerril</td>
+                                        <td data-label="Máquina Virtual">PC-02</td>
+                                        <td data-label="Sistema Operativo"><i class="fab fa-ubuntu"></i> Ubuntu 24 LTS</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Usuario Asignado"><i class="fas fa-user-tie"></i> Liss Nayalith</td>
+                                        <td data-label="Máquina Virtual">PC-03</td>
+                                        <!-- AQUÍ ESTÁ EL CAMBIO -->
+                                        <td data-label="Sistema Operativo"><i class="fab fa-linux"></i> Debian 12</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Usuario Asignado"><i class="fas fa-user-tie"></i> Miguel Gonzales</td>
+                                        <td data-label="Máquina Virtual">PC-04</td>
+                                        <td data-label="Sistema Operativo"><i class="fab fa-windows"></i> Windows 10 Pro</td>
+                                    </tr>
+                                    <tr class="server-admin-row">
+                                        <td data-label="Usuario Asignado"><i class="fas fa-user-secret"></i> Juan Jose (Admin)</td>
+                                        <td data-label="Máquina Virtual">Servidor Host/DC</td>
+                                        <td data-label="Sistema Operativo"><i class="fas fa-server"></i> Windows Server 2022</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <div class="user-list-row">
-                        <div><i class="fas fa-user-tie"></i> Aarón López</div>
-                        <div>PC-01</div>
-                        <div><i class="fab fa-windows"></i> Windows 7</div>
+                </section>
+
+        <!-- ==================== PROCESO ==================== -->
+        <section id="process" class="section-padding section-light">
+            <div class="container">
+                <h2 data-aos="fade-up"><i class="fas fa-tasks"></i> Fases Clave del Proyecto</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                        <div class="timeline-icon"><i class="fas fa-drafting-compass"></i></div>
+                        <div class="timeline-content">
+                            <h3>1. Planificación y Diseño</h3>
+                            <p>Definición de arquitectura, S.O. y recursos.</p>
+                        </div>
                     </div>
-                    <div class="user-list-row">
-                        <div><i class="fas fa-user-tie"></i> Medalith Becerril</div>
-                        <div>PC-02</div>
-                        <div><i class="fab fa-ubuntu"></i> Ubuntu 24 LTS</div>
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                        <div class="timeline-icon"><i class="fas fa-server"></i></div>
+                        <div class="timeline-content">
+                            <h3>2. Configuración del Host</h3>
+                            <p>Instalación de S.O. anfitrión y virtualización.</p>
+                        </div>
                     </div>
-                    <div class="user-list-row">
-                        <div><i class="fas fa-user-tie"></i> Liss Nayalith</div>
-                        <div>PC-03</div>
-                        <div><i class="fab fa-debian"></i> Debian 12</div>
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                        <div class="timeline-icon"><i class="fas fa-desktop"></i></div>
+                        <div class="timeline-content">
+                            <h3>3. Creación de VMs</h3>
+                            <p>Despliegue y config. base de VMs cliente.</p>
+                        </div>
                     </div>
-                    <div class="user-list-row">
-                        <div><i class="fas fa-user-tie"></i> Miguel Gonzales</div>
-                        <div>PC-04</div>
-                        <div><i class="fab fa-windows"></i> Windows 10 Pro</div>
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+                        <div class="timeline-icon"><i class="fas fa-shield-halved"></i></div> <!-- Ícono alternativo para AD DS -->
+                        <div class="timeline-content">
+                            <h3>4. Implementación AD DS</h3>
+                            <p>Promoción a Controlador de Dominio.</p>
+                        </div>
                     </div>
-                     <div class="user-list-row server-admin-row">
-                        <div><i class="fas fa-user-secret"></i> Juan Jose (Admin)</div>
-                        <div>Servidor Host/DC</div>
-                        <div><i class="fas fa-server"></i> Windows Server 2022</div>
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="500">
+                        <div class="timeline-icon"><i class="fas fa-network-wired"></i></div>
+                        <div class="timeline-content">
+                            <h3>5. Config. Servicios Red</h3>
+                            <p>Establecimiento de DNS y DHCP.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="600">
+                        <div class="timeline-icon"><i class="fas fa-users"></i></div>
+                        <div class="timeline-content">
+                            <h3>6. Gestión de Identidades</h3>
+                            <p>Creación de usuarios, grupos y UOs.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="700">
+                        <div class="timeline-icon"><i class="fas fa-user-shield"></i></div>
+                        <div class="timeline-content">
+                            <h3>7. Aplicación de GPOs</h3>
+                            <p>Diseño e implementación de políticas.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="800">
+                        <div class="timeline-icon"><i class="fas fa-check-double"></i></div>
+                        <div class="timeline-content">
+                            <h3>8. Integración y Pruebas</h3>
+                            <p>Unión al dominio y verificación funcional.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="900">
+                        <div class="timeline-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="timeline-content">
+                            <h3>9. Documentación</h3>
+                            <p>Elaboración de informes y manuales.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- SECCIÓN PROCESO (ya existente) -->
-        <section id="process" class="reveal section-padding">
-            <div class="container section-content-wrapper">
-                <h2><i class="fas fa-tasks"></i> Fases Clave del Proyecto</h2>
-                <ol class="process-list">
-                    <li><strong>Planificación y Diseño:</strong> Definición de la arquitectura, selección de S.O. y asignación de recursos.</li>
-                    <li><strong>Configuración del Host:</strong> Instalación y configuración del sistema operativo anfitrión y el software de virtualización.</li>
-                    <li><strong>Creación de VMs:</strong> Despliegue y configuración base de cada máquina virtual (W7, Ubuntu, Debian, W10).</li>
-                    <li><strong>Implementación de AD DS:</strong> Promoción del servidor a Controlador de Dominio.</li>
-                    <li><strong>Configuración de Servicios de Red:</strong> Establecimiento de DNS y DHCP.</li>
-                    <li><strong>Gestión de Identidades:</strong> Creación de usuarios, grupos y unidades organizativas.</li>
-                    <li><strong>Aplicación de GPOs:</strong> Diseño e implementación de políticas de grupo para seguridad y configuración.</li>
-                    <li><strong>Integración y Pruebas:</strong> Unión de VMs al dominio y verificación exhaustiva de conectividad y funcionalidad.</li>
-                    <li><strong>Documentación:</strong> Elaboración de informes técnicos y manuales del proyecto.</li>
-                </ol>
             </div>
         </section>
     </main>
@@ -261,6 +379,10 @@
             <p>Un proyecto dedicado a la excelencia en la administración de sistemas virtualizados.</p>
         </div>
     </footer>
+
+    <a href="#" id="scrollToTopBtn" class="scroll-to-top-btn" title="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </a>
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
