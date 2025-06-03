@@ -33,7 +33,7 @@ web-aws-g1/
 3. ¡Explora el contenido!
 
 ## 👥 Autor
-[Tu Nombre]
+Jozef Aarón López Díaz
 
 ## 📝 Notas del Curso
 Este proyecto forma parte de la evaluación del curso de virtualización y representa la implementación práctica de los conceptos aprendidos en clase.
